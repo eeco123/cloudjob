@@ -9,6 +9,6 @@ WORKDIR /var/www/html
 RUN unzip kindle.zip
 RUN cp -rvf markups-kindle/*.
 RUN rm -rf_MACOSX markups-kindle kindle.zip
-CMD ["/ust/sbin/nttpd, "0", "FOREGROUND")
+CMD ["/usr/sbin/httpd, "-D", "FOREGROUND")
 EXPOSE 80
 
