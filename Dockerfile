@@ -4,11 +4,12 @@ MAINTAINER saddammujawar@gmail.com
 RUN yum install -y httpd \
 zip\
 unzip
-ADD https:// www. free-css.com/assets/files/free-css-templates/download/page247/kindle.zip /var/www/html/
-WORKDIR /var/www/html
-RUN unzip kindle.zip
-RUN cp -rvf markups-kindle/*.
-RUN rm -rf_MACOSX markups-kindle kindle.zip
-CMD ["/usr/sbin/httpd, "-D", "FOREGROUND")
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page281/cs.zip /var/www/html/
+WORKDIR /var/www/html/
+RUN unzip cs.zip
+RUN cp -rvf cs/* .
+RUN rm -rf cs cs.zip
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND")
 EXPOSE 80
+
 
