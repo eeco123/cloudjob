@@ -1,5 +1,5 @@
 
-FROM ubuntu
+FROM centos:latest
 MAINTAINER saddammujawar@gmail.com
 RUN yum install -y httpd \
 zip\
@@ -9,7 +9,7 @@ WORKDIR /var/www/html/
 RUN unzip cs.zip
 RUN cp -rvf cs/* .
 RUN rm -rf cs cs.zip
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND")
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 
 
